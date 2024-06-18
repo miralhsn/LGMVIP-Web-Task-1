@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffd1dc; /* Baby pink background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,68 +9,92 @@ body {
 }
 
 .container {
-    background: #fff;
+    width: 600px; /* Larger box size */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    text-align: center; /* Center align content */
 }
 
 h1 {
-    margin-bottom: 20px;
+    color: #333333;
+    margin-bottom: 20px; /* Space between heading and input */
 }
 
-input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #5cb85c;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #4cae4c;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
+.input-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 20px; /* Space between input and list */
 }
 
-li.completed {
-    text-decoration: line-through;
-    color: #888;
-}
-
-li button {
-    background: #d9534f;
-    border: none;
-    color: #fff;
+.todo-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
     border-radius: 4px;
-    cursor: pointer;
-    padding: 5px 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
-li button:hover {
-    background: #c9302c;
+.priority-selector {
+    width: 28%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.todo-list {
+    text-align: left; /* Align list items to the left */
+}
+
+.todo-item {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 10px; /* Space between list items */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning for absolute elements */
+}
+
+.todo-item.low {
+    border-left: 5px solid green;
+}
+
+.todo-item.medium {
+    border-left: 5px solid orange;
+}
+
+.todo-item.high {
+    border-left: 5px solid red;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.complete-btn, .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.complete-btn {
+    color: #00cc00; /* Green tick color */
+}
+
+.delete-btn {
+    color: #ff3333; /* Red delete button color */
+}
+
+.complete-btn:hover, .delete-btn:hover {
+    color: #990000; /* Darker hover color for buttons */
 }
