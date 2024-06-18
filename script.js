@@ -1,6 +1,7 @@
 const todoInput = document.querySelector('.todo-input');
 const prioritySelector = document.querySelector('.priority-selector');
 const todoList = document.querySelector('#todo-list');
+const addButton = document.querySelector('.add-btn');
 
 // Function to create a new todo item
 function createTodoItem(task, priority) {
@@ -29,11 +30,21 @@ function createTodoItem(task, priority) {
     sortTasks();
 }
 
-// Event listener for adding a new task
-todoInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && todoInput.value.trim() !== '') {
+// Function to add a new task
+function addTask() {
+    if (todoInput.value.trim() !== '') {
         createTodoItem(todoInput.value.trim(), prioritySelector.value);
         todoInput.value = ''; // Clear input field after adding task
+    }
+}
+
+// Event listener for Enter button
+addButton.addEventListener('click', addTask);
+
+// Event listener for Enter key press
+todoInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        addTask();
     }
 });
 

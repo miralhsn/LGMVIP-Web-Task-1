@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffd1dc; /* Baby pink background */
+    background-color: #d3d3d3; /* Light grey background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,16 +21,21 @@ body {
 h1 {
     color: #333333;
     margin-bottom: 20px; /* Space between heading and input */
+    padding: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 .input-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px; /* Space between input and list */
+    gap: 10px;
 }
 
 .todo-input {
-    width: 70%;
+    flex: 2;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #cccccc;
@@ -39,12 +44,23 @@ h1 {
 }
 
 .priority-selector {
-    width: 28%;
+    flex: 1;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #cccccc;
     border-radius: 4px;
     box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.add-btn {
+    flex: 0.5;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
 }
 
 .todo-list {
@@ -84,15 +100,17 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
+    right: 40px;
 }
 
 .complete-btn {
     color: #00cc00; /* Green tick color */
+    right: 40px; /* Adjust position to avoid overlap */
 }
 
 .delete-btn {
     color: #ff3333; /* Red delete button color */
+    right: 10px; /* Adjust position to avoid overlap */
 }
 
 .complete-btn:hover, .delete-btn:hover {
