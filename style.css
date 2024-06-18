@@ -9,18 +9,18 @@ body {
 }
 
 .container {
-    width: 600px; /* Larger box size */
+    width: 600px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    text-align: center; /* Center align content */
+    box-sizing: border-box;
+    text-align: center;
 }
 
 h1 {
     color: #333333;
-    margin-bottom: 20px; /* Space between heading and input */
+    margin-bottom: 20px;
     padding: 10px;
     border: 2px solid #cccccc;
     border-radius: 10px;
@@ -29,9 +29,8 @@ h1 {
 
 .input-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Space between input and list */
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .todo-input {
@@ -40,7 +39,7 @@ h1 {
     font-size: 16px;
     border: 1px solid #cccccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    box-sizing: border-box;
 }
 
 .priority-selector {
@@ -49,7 +48,7 @@ h1 {
     font-size: 16px;
     border: 1px solid #cccccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    box-sizing: border-box;
 }
 
 .add-btn {
@@ -64,16 +63,16 @@ h1 {
 }
 
 .todo-list {
-    text-align: left; /* Align list items to the left */
+    text-align: left;
 }
 
 .todo-item {
     background-color: #f9f9f9;
     padding: 12px;
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 10px;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure positioning for absolute elements */
+    position: relative;
 }
 
 .todo-item.low {
@@ -100,19 +99,18 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 40px;
 }
 
 .complete-btn {
-    color: #00cc00; /* Green tick color */
-    right: 40px; /* Adjust position to avoid overlap */
+    color: #00cc00;
+    right: 40px;
 }
 
 .delete-btn {
-    color: #ff3333; /* Red delete button color */
-    right: 10px; /* Adjust position to avoid overlap */
+    color: #ff3333;
+    right: 10px;
 }
 
 .complete-btn:hover, .delete-btn:hover {
-    color: #990000; /* Darker hover color for buttons */
+    color: #990000;
 }
