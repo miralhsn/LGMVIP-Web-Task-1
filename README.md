@@ -18,8 +18,8 @@ You can view the live demo of the application [here](https://miralhsn.github.io/
 
 ## Screenshots
 
-![Screenshot of the To-Do List application](screenshot/screenshot1.png)
-![Screenshot of adding a new task](screenshot/screenshot2.png)
+![Screenshot of the To-Do List application](screenshots/screenshot1.png)
+![Screenshot](screenshots/screenshot2.png)
 
 ## Setup
 
